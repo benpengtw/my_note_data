@@ -7,8 +7,8 @@
     * 預訂場域:阿瘦皮鞋
 * 經濟部能源局業界能專計畫
 ![wellcome](wellcome.png)
-![ifancy1](ifancy1.png)
-![ifancy](ifancy2.png)
+![ifancy1](ifancy1.PNG)
+![ifancy](ifancy2.PNG)
 在IP cam中加入people count功能(最近新增節能控制器)，並透過mqtt將資料傳到rest server進行統計分析，該平台同時有管理設備的功能。
 
     * 前端：基於react-redux-starter-kit
@@ -18,7 +18,7 @@
     * 前端：改成同樣基於 react 的 ant-design-pro
     * 後端；由大陸同事負責，透過websocket傳送資料，並使用js解碼影像(html5影像串流解決方案)
 
-![led](led.png)
+![led](led.PNG)
 
 在LED字幕機中嵌ip cam 及熱像儀，可使用網頁管理字幕機內容及設定警報溫度，並觀看即時熱像及影像專案前期：使用Axure規劃網站初步內容給上司業務看(參考資料)，經過同意才實作
 
@@ -28,7 +28,7 @@
 使用現成的 wordpress CMS 架設購物網站，並架設在廉價主機商中(LNMP環境)，並開始使用phpstorm 去trace code，解決wordpress的插件衝突問題，並與客戶溝通，一起規劃較小型的購物車網站(CMS)，並實作(除美術部分)。
 * lavido.com.tw 協助客戶規劃購物車網站，內容包含商品動線、金流串接、物流串階及整理。並協助公司美術規劃網站外觀，使之可以操作(wordpress套版網站)。
 
-![lavido](lavido.png)
+![lavido](lavido.PNG)
 
 ## PIXNET
 2016 May ~ 2016 Jul
