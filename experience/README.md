@@ -25,10 +25,13 @@
 ## LOHAS IT
 2016 Aug ~ 2017 Jul
 
-使用現成的 wordpress CMS 架設購物網站，並架設在廉價主機商中(LNMP環境)，並開始使用phpstorm 去trace code，解決wordpress的插件衝突問題，並與客戶溝通，一起規劃較小型的購物車網站(CMS)，並實作(除美術部分)。
-* lavido.com.tw 協助客戶規劃購物車網站，內容包含商品動線、金流串接、物流串階及整理。並協助公司美術規劃網站外觀，使之可以操作(wordpress套版網站)。
-
+使用現成的 wordpress CMS 架設購物網站，並架設在廉價主機商中(LNMP環境)，並開始使用phpstorm 去trace code，解決wordpress的插件衝突問題，並協助客戶規劃購物車網站，內容包含商品動線、金流串接、物流串階及整理。並實作(除美術部分)。
+* lavido.com.tw 
 ![lavido](lavido.PNG)
+
+* www.healthimei.com 義美生機
+
+![healthimei](healthimei.PNG)
 
 ## PIXNET
 2016 May ~ 2016 Jul
