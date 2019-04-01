@@ -31,7 +31,7 @@
 
 * www.healthimei.com 義美生機
 
-![healthimei](healthimei.PNG)
+![healthimei](healthimei.png)
 
 ## PIXNET
 2016 May ~ 2016 Jul
