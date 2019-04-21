@@ -57,7 +57,7 @@ layer 3 應用層:直接和應用程式介面結合並提供常見的網路應�
 https://www.jannet.hk/zh-Hant/
 
 # 雲
-**laas,Paas,Saas**
+**Iaas,Paas,Saas**
 
 **基礎設施即服務(Infrastructure as a Service，簡稱IaaS)** 
 
