@@ -7,8 +7,10 @@
     * 預訂場域:阿瘦皮鞋
 * 經濟部能源局業界能專計畫
 ![wellcome](wellcome.png)
-![ifancy1](ifancy1.PNG)
-![ifancy](ifancy2.PNG)
+<img src="ifancy1.PNG" alt="ifancy1"
+	title="ifancy1" width="800" height="480" />
+<img src="ifancy2.PNG" alt="ifancy"
+	title="ifancy" width="800" height="480" />
 在IP cam中加入people count功能(最近新增節能控制器)，並透過mqtt將資料傳到rest server進行統計分析，該平台同時有管理設備的功能。
 
     * 前端：基於react-redux-starter-kit
@@ -27,12 +29,11 @@
 
 使用現成的 wordpress CMS 架設購物網站，並架設在廉價主機商中(LNMP環境)，並開始使用phpstorm 去trace code，解決wordpress的插件衝突問題，並協助客戶規劃購物車網站，內容包含商品動線、金流串接、物流串階及整理。並實作(除美術部分)。
 * lavido.com.tw 
-![lavido](lavido.PNG)
-
+<img src="lavido.PNG" alt="lavido"
+	title="lavido" width="800" height="480" />
 * www.healthimei.com 義美生機
-
-![healthimei](healthimei.png)
-
+<img src="healthimei.png" alt="healthimei"
+	title="healthimei" width="800" height="480" />
 ## PIXNET
 2016 May ~ 2016 Jul
 
