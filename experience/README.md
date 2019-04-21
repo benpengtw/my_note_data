@@ -41,4 +41,4 @@
 ## RETCHAT
 2015 Mar ~ 2016 Feb
 
-使用selenium webdriver測試廣告推薦網頁
+使用selenium webdriver測試廣告供應方平台（Supply Side Platform，SSP）
