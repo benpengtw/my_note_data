@@ -101,6 +101,7 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
 
 ## 機房
 * 有使用Juniper設備，所以除了IOS外，也要會JUNOS
+* SONET/SDH(光纖通訊標準) 可與 10GBE 相接
 * 超融合基礎架構：超融合架構以通用硬體伺服器構成的叢集為基礎、以VM為核心，具備管理簡單、便於以積木堆疊方式擴充等特性。(伺服器的一種形式)
 	* EX：VMware EVO:RAIL,Nutanix,SimpliVity
 
@@ -109,10 +110,6 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
 	* EX： xen, kvm, VMware ESX/ESXi (後者為免費版本), Microsoft Hyper-V
 * type II : 又稱為 hosted hypervisor ，跟 type I 相反，就是我必須裝作業系統之後，再去安裝 hypervisor ，通常都附在虛擬機軟體了，這種 hypervisor 的控制硬體方式是透過原本的作業系統代為處理
 	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player
-
-
-* SONET/SDH(光纖通訊標準) 可與 10GBE 相接
-
 
 參考資料
 * https://baike.baidu.com/item/IP%20over%20SDH
