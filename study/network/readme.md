@@ -94,7 +94,7 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
     Azure Stack 在台正式上市  隨用隨付 (pay-as-you-use) 方案依客戶需求選擇
 
 參考資料
-* https://dotblogs.com.tw/007_lawrence/2017/08/21/155203
+* https://dotblogs.com.tw/007_lawrence/2017/08/21/155203 Iaas、Pass、Saas
 * http://www.taiwancloud.com.tw/products/iaas/introduction/
 * https://news.microsoft.com/zh-tw/microsoft-azure-stack/
 * https://www.ithome.com.tw/tech/94707
@@ -109,12 +109,31 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
 * type I : 又稱為 bare-metal hypervisor ，看這個詞大致上就是跟裸機裝虛擬機有點關係，直接裝一層 hypervisor 在空機上面，然後 VM 的系統在安裝在 hypervisor ，這樣的虛擬系統離硬體控制比較接近，VM 要控制的硬體資源直接透過 hypervisor 去操作
 	* EX： xen, kvm, VMware ESX/ESXi (後者為免費版本), Microsoft Hyper-V
 * type II : 又稱為 hosted hypervisor ，跟 type I 相反，就是我必須裝作業系統之後，再去安裝 hypervisor ，通常都附在虛擬機軟體了，這種 hypervisor 的控制硬體方式是透過原本的作業系統代為處理
-	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player
+	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player, docker
+
+**OpenStack**
+是一個雲操作系統，通過數據中心可控制大型的計算、存儲、網絡等資源池。所有的管理通過前端界面管理員就可以完成，同樣也可以通過web接口讓最終用戶部署資源。ceph
+
+簡單理解: 可以把它類比公有雲，它將各種基礎資源虛擬化，並提供簡化的方式去管理。偏向IAAS服務
+
+**k8s**
+是用於自動部署、擴展和管理容器化（containerized）應用程序的開源系統。
+
+簡單理解: 容器編排，管理多機的容器狀態. 偏向PAAS服務
+
+### 軟體定義網路（Software Defined Networking，SDN） ###
+**OpenFlow**
+OpenFlow技術後續的制定，其特色就是修改了傳統網路架構的控制模式，將網路的管理權限交由控制層的SDN控制器（Controller）軟體負責，採用集中控管的方式。 如同本文章前面的比喻 － 控制器軟體就像是人類的大腦，基礎設施層的SDN交換機就像是人類的四肢，而OpenFlow技術則用於在控制層與基礎設施層間建立傳輸通道，就像是人類的神經一樣，負責大腦與四肢的溝通。
+
+**Overlay**
+以重疊網路為基礎的解決方案並不是最近才被提出，例如：VLAN（虛擬區域網路）就是其中的典型代表，然而由於VLAN數量的不足（理論上最多只能有4096個VLAN，因為在802.1Q協定中只定義了12 個位元的VLAN ID欄位）大大限制了多租戶（Multi-Tenancy）雲端業務的規模； 在目前以重疊網路為基礎的SDN方案中，採用了VXLAN、NVGRE等的隧道（Tunneling）技術，它是以現行的IP網路為基礎，在其上部署重疊的邏輯網路（Overlay Logical Network），使得原本邏輯上屬於相同租戶的多台伺服器（或虛擬機器），雖然在實體位置上彼此分開，但是可以透過Layer 2 over Layer 3隧道的建立來進行網路通訊； 換句話是利用重疊在三層IP網路之上的虛擬網路傳遞二層資料封包，實現了可以跨越三層實體網路進行通訊的二層邏輯網路（也就是業界所謂“大二層”的網路虛擬化概念），並進而使得分開在不同位置的伺服器主機上實施虛擬機器的線上移轉（vMotion）與高可用性的容錯機制（Fault Tolerance）成為可能。 
+
+### 網路功能虛擬化（Network Virtualization Function，NFV) ###
+NFV則是將實體設備的網路功能，以軟體的型態呈現，例如路由器（Router）、防火牆（Firewall）、負載平衡器（Load Balancer）與用戶終端設備（CPE）等；這種將網路功能虛擬化（意即軟體化）的概念，顛覆過去網路功能必須存在特定硬體設備中的傳統架構。因網路功能被虛擬化後，有著極佳的彈性配置特性，能加速網路服務的部署效率，亦能降低購置專用硬體的開銷。
+![cloud](https://cdn-images-1.medium.com/max/1600/1*KpRM2S5AhrhBLl0GetuVpg.png "cloud")
 
 參考資料
-* https://baike.baidu.com/item/IP%20over%20SDH
 * https://www.ithome.com.tw/tech/92534
-* https://www.ithome.com.tw/tech/102115
-* https://kknews.cc/zh-tw/tech/qb8zxng.html
-* https://freedomknight.me/chu-tan-xu-ni-ji-he-xu-ni-hua/
-* https://www.ithome.com.tw/tech/90786
+* https://freedomknight.me/chu-tan-xu-ni-ji-he-xu-ni-hua/ hypervisor 
+* https://juejin.im/post/5b953d21f265da0afa3dc61b Kubernetes/OpenStack 
+* https://www.ithome.com.tw/tech/98858 ceph,Server SAN
