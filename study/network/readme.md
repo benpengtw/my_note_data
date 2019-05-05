@@ -117,9 +117,9 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
 	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player
 
 管理平台選擇
-* VMware<===>vCenter
+* VMwareESX<===>vCenter
 
-* HyperV<===>SVMMC
+* HyperV<===>SCVMM
 
 * XEN<===>XEN server
 
@@ -148,9 +148,11 @@ KVM的管理平台選擇較多，沒有一個管理平臺能夠拿來直接使�
 
 ### container與hypervisor區別 ###
 ![container](https://blog.mikesir87.io/images/containers-vs-vms-old.jpg "container")
+
 A “more correct” version
+
 ![container](https://blog.mikesir87.io/images/containers-vs-vms-correct.png "container")
-**Docker容器技术**
+**Docker容器技術**
 
 **k8s**
 
