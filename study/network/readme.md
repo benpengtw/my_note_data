@@ -51,10 +51,15 @@ layer 3 應用層:直接和應用程式介面結合並提供常見的網路應�
 ...待補
 
 模擬器相關:EVE-NG掛IOU(IOS on unix)
+## 題庫
+https://github.com/benpengtw/my_note_data/tree/master/study/network/CCNA（200-125）题库V3.0（2019.01.08）选择题.pdf
+
 
 參考資料
 
-https://www.jannet.hk/zh-Hant/
+* https://www.jannet.hk/zh-Hant/
+
+* https://bbs.hh010.com/ (hh010/鴻鹄論壇)
 
 # 雲
 **Iaas,Paas,Saas**
@@ -109,14 +114,47 @@ Azure Stack運用與 Azure相同的管理與自動化工具、快速佈建及擴
 * type I : 又稱為 bare-metal hypervisor ，看這個詞大致上就是跟裸機裝虛擬機有點關係，直接裝一層 hypervisor 在空機上面，然後 VM 的系統在安裝在 hypervisor ，這樣的虛擬系統離硬體控制比較接近，VM 要控制的硬體資源直接透過 hypervisor 去操作
 	* EX： xen, kvm, VMware ESX/ESXi (後者為免費版本), Microsoft Hyper-V
 * type II : 又稱為 hosted hypervisor ，跟 type I 相反，就是我必須裝作業系統之後，再去安裝 hypervisor ，通常都附在虛擬機軟體了，這種 hypervisor 的控制硬體方式是透過原本的作業系統代為處理
-	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player, docker
+	* EX：Oracle Virtual Box, Microsoft Virtual PC, VMware Workstation/Fusion/Player
+
+管理平台選擇
+* VMware<===>vCenter
+
+* HyperV<===>SVMMC
+
+* XEN<===>XEN server
+
+* KVM<===> (multi)
+
+__KVM__
+
+KVM的管理平台選擇較多，沒有一個管理平臺能夠拿來直接使用，每個平臺都有自己的特點，要使用都要長期打磨。
+
+**CloudStack：**
+    特點是聲音越來越小，社群活躍度下降，可能剩下的問題是什麼時候shutdown。
+
+**OpenNebula：**
+    是個小眾的管理平臺，比較穩定，但是生產環境用起來，也至少需要幾個月的時間摸索。
+
+**Proxmox VE：**
+    PVE是目前為止，最接近vCenter的管理平臺，穩定性非常好，基本是拿來就有。PVE的問題是給人感覺概念比較另類，基於Debian定製，不使用Libvirt，雖然開源，但是要根據自己的需求定製很難，因為門檻非常高。
+
+**oVirt：**
+    oVirt的目標就是瞄準vCenter，oVirt的問題是還有許多功能有待完善，穩定性有待提升，大問題比較少了，但是小問題不斷。oVirt和RHEV的關係，有可能永遠就像Fedora和RHEL，oVirt就是一個實驗版本，不斷的在更新。
 
 **OpenStack**
-是一個雲操作系統，通過數據中心可控制大型的計算、存儲、網絡等資源池。所有的管理通過前端界面管理員就可以完成，同樣也可以通過web接口讓最終用戶部署資源。ceph
+是一個雲操作系統，通過數據中心可控制大型的計算、存儲、網絡等資源池。所有的管理通過前端界面管理員就可以完成，同樣也可以通過web接口讓最終用戶部署資源。(大型)
 
 簡單理解: 可以把它類比公有雲，它將各種基礎資源虛擬化，並提供簡化的方式去管理。偏向IAAS服務
 
+### container與hypervisor區別 ###
+![container](https://blog.mikesir87.io/images/containers-vs-vms-old.jpg "container")
+A “more correct” version
+![container](https://blog.mikesir87.io/images/containers-vs-vms-correct.png "container")
+**Docker容器技术**
+
 **k8s**
+
+基于容器的集群管理平台，全稱是kubernetes，
 是用於自動部署、擴展和管理容器化（containerized）應用程序的開源系統。
 
 簡單理解: 容器編排，管理多機的容器狀態. 偏向PAAS服務
@@ -137,3 +175,6 @@ NFV則是將實體設備的網路功能，以軟體的型態呈現，例如路�
 * https://freedomknight.me/chu-tan-xu-ni-ji-he-xu-ni-hua/ hypervisor 
 * https://juejin.im/post/5b953d21f265da0afa3dc61b Kubernetes/OpenStack 
 * https://www.ithome.com.tw/tech/98858 ceph,Server SAN
+* https://blog.mikesir87.io/2017/05/docker-is-not-a-hypervisor/
+* https://zhuanlan.zhihu.com/p/53260098
+* https://www.itread01.com/content/1546859350.html
