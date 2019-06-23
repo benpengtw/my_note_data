@@ -34,12 +34,8 @@
 * www.healthimei.com 義美生機
 <img src="healthimei.png" alt="healthimei"
 	title="healthimei" width="800" height="480" />
-## PIXNET
-2016 May ~ 2016 Jul
-
-掌握linux console、vim、git(無gui)的使用，初階php撰寫。
 
 ## RETCHAT
-2015 Mar ~ 2016 Feb
+2015 Mar ~ 2016 May
 
 使用selenium webdriver測試廣告供應方平台（Supply Side Platform，SSP）
